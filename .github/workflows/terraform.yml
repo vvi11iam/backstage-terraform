@@ -56,6 +56,7 @@ jobs:
       env:
         TF_VAR_instanceName: ${{ github.event.inputs.instanceName }}
         TF_VAR_awsRegion: ${{ github.event.inputs.awsRegion }}
+        HCP_WORKSPACE_ID: ${{ secrets.HCP_WORKSPACE_ID }}
       run: terraform apply -auto-approve
       working-directory: Terraform
 
