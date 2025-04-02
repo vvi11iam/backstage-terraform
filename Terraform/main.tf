@@ -8,15 +8,14 @@ terraform {
 
   required_version = ">= 1.10.0"
 
-  cloud {
-    # The name of your Terraform Cloud organization.
-    organization = "romthayon2310"
+  cloud { 
+    
+    organization = "romthayon2310" 
 
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "test-wp"
-    }
-  }
+    workspaces { 
+      name = "test-wp" 
+    } 
+  } 
 
 }
 
