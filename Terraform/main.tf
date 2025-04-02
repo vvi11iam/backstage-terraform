@@ -20,17 +20,9 @@ terraform {
 
 }
 
-variable "awsRegion" {
-  description = "AWS region"
-  type        = string
-  default     = "us-east-1"
-}
+variable "awsRegion" {}
 
-variable "instanceName" {
-  description = "EC2 instanceName"
-  type        = string
-  default     = "none"
-}
+variable "instanceName" {}
 
 provider "aws" {
   region = var.awsRegion
