@@ -9,10 +9,6 @@ terraform {
   required_version = ">= 1.10.0"
 }
 
-provider "aws" {
-  region = var.aws_region
-}
-
 variable "awsRegion" {
   description = "AWS region"
   type        = string
@@ -23,6 +19,10 @@ variable "instanceName" {
   description = "EC2 instanceName"
   type        = string
   default     = "none"
+}
+
+provider "aws" {
+  region = var.awsRegion
 }
 
 data "aws_ami" "ubuntu" {
