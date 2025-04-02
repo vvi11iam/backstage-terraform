@@ -1,22 +1,10 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-
-  required_version = ">= 1.10.0"
-
   cloud { 
-    
     organization = "romthayon2310" 
-
     workspaces { 
       name = "test-wp" 
     } 
   } 
-
 }
 
 variable "awsRegion" {}
