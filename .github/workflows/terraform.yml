@@ -53,7 +53,10 @@ jobs:
       
     # Step to apply the Terraform plan
     - name: Terraform Apply
-      run: terraform apply -var instanceName=${{ github.event.inputs.instanceName }} -var awsRegion=${{ github.event.inputs.awsRegion }} -auto-approve
+      env:
+        TF_VAR_INSTANCE_NAME: ${{ github.event.inputs.instanceName }}
+        TF_VAR_REGION: ${{ github.event.inputs.awsRegion }}
+      run: terraform apply -auto-approve
       working-directory: Terraform
 
   # Job for destroying the EKS cluster
