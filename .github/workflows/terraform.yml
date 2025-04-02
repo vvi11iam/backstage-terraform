@@ -54,8 +54,8 @@ jobs:
     # Step to apply the Terraform plan
     - name: Terraform Apply
       env:
-        TF_VAR_INSTANCE_NAME: ${{ github.event.inputs.instanceName }}
-        TF_VAR_REGION: ${{ github.event.inputs.awsRegion }}
+        TF_VAR_instanceName: ${{ github.event.inputs.instanceName }}
+        TF_VAR_awsRegion: ${{ github.event.inputs.awsRegion }}
       run: terraform apply -auto-approve
       working-directory: Terraform
 
