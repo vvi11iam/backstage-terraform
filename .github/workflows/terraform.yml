@@ -1,5 +1,5 @@
 # Define the name of the GitHub Action workflow
-name: Manage EKS Cluster
+name: EC2 Instance
 # This workflow is manually triggered using the GitHub Actions UI
 on:
   workflow_dispatch:
