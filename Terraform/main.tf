@@ -7,6 +7,17 @@ terraform {
   }
 
   required_version = ">= 1.10.0"
+
+  backend "remote" {
+    # The name of your Terraform Cloud organization.
+    organization = "romthayon2310"
+
+    # The name of the Terraform Cloud workspace to store Terraform state files in.
+    workspaces {
+      name = "backstage-terraform"
+    }
+  }
+
 }
 
 variable "awsRegion" {
